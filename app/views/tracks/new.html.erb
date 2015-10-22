@@ -1,0 +1,14 @@
+<h1>Add a new track!</h1>
+
+<%= render "shared/errors" %>
+
+<form action="<%= new_track %>" method="Post">
+  <%= auth_token %>
+
+  <label for="track_name">Track Name</label>
+  <input  type="text"
+          name="tracks[name]"
+          id="track_name"
+          value="<%= @track.name %>">
+
+</form>

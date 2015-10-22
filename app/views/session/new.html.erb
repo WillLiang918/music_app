@@ -1,10 +1,6 @@
 <h1>Log In</h1>
 
-<% if flash.now[:errors] %>
-  <% flash.now[:errors].each do |error| %>
-    <%= error %>
-  <% end %>
-<% end %>
+<%= render "shared/errors" %>
 
 <form action="/session" method="Post">
   <%= auth_token %>
